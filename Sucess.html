@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Message Sent | E-Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #43cea2, #185a9d);
+            color: white;
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .success-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .success-box h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .success-box p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .checkmark {
+            font-size: 60px;
+            color: #00ffae;
+            animation: pop 0.5s ease;
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="success-box">
+        <div class="checkmark">✅</div>
+        <h1>Thank You!</h1>
+        <p>Your message has been sent successfully.</p>
+        <p>We'll get back to you shortly.</p>
+        <p>Redirecting to home...</p>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            window.location.href = "index.html"; // Or "Home.html" if that's your homepage
+        }, 4000);
+    </script>
+</body>
+
+</html>
