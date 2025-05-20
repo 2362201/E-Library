@@ -1,0 +1,31 @@
+<!-- payment.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Payment | E-Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="payment-container">
+        <h2>Pay for <span id="bookName">the book</span></h2>
+        <form action="process_payment.php" method="POST">
+            <input type="text" name="name" placeholder="Cardholder Name" required><br>
+            <input type="text" name="card_number" placeholder="Card Number" maxlength="16" required><br>
+            <input type="text" name="cvv" placeholder="CVV" maxlength="4" required><br>
+            <input type="hidden" name="book" id="bookInput">
+            <button type="submit">Complete Payment</button>
+        </form>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const book = params.get('book') || "the book";
+        document.getElementById("bookName").textContent = book;
+        document.getElementById("bookInput").value = book;
+    </script>
+</body>
+
+</html>
