@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | E-Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .success-message {
+            display: none;
+            background-color: #dff0d8;
+            color: #3c763d;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://th.bing.com/th/id/OIP.LuPdo5BXEqpQHa1wSM7_BwHaLH?rs=1&pid=ImgDetMain" alt="Book Icon"
+                class="book-icon">E-Library
+        </div>
+
+        <div class="burger" onclick="toggleMenu()">☰</div>
+        <div class="nav-links" id="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Books.html">Books</a>
+            <a href="Services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Fill out the form below and we'll get back to you soon.</p>
+
+        <!-- Success message that will be shown after form submission -->
+        <div id="successMessage" class="success-message">
+            <p>We will contact you soon.</p>
+        </div>
+
+        <form id="contactForm" action="send_email.php" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe" />
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com" />
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Feedback / Question" />
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required
+                    placeholder="Type your message here..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <script>
+        // Toggle mobile navigation menu
+        function toggleMenu() {
+            const navLinks = document.getElementById("nav-links");
+            navLinks.classList.toggle("active");
+        }
+
+        // Handle contact form submission
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contactForm");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault(); // Stop form from submitting to the server
+
+                // Get form data
+                const formData = new FormData(form);
+
+                // Optional: Send form data via fetch()
+                // fetch('/your-endpoint', {
+                //   method: 'POST',
+                //   body: formData
+                // });
+
+                // Show success message immediately (if using inline message)
+                const successMessage = document.getElementById('successMessage');
+                if (successMessage) {
+                    successMessage.style.display = 'block';
+                }
+
+                // Reset form fields
+                form.reset();
+
+                // Redirect to message sent page after short delay (or immediately)
+                window.location.href = "sucess.html";
+            });
+        });
+    </script>
+
+</body>
+
+</html>
