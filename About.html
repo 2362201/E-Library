@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | E-Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png"
+        href="https://th.bing.com/th/id/OIP.jxgcO4kGg29mLMQadCXelwHaE0?rs=1&pid=ImgDetMain">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://th.bing.com/th/id/OIP.LuPdo5BXEqpQHa1wSM7_BwHaLH?rs=1&pid=ImgDetMain" alt="Book Icon"
+                class="book-icon">E-Library
+        </div>
+        <!-- <div class="logo">E-Library</div> -->
+        <div class="burger" onclick="toggleMenu()">☰</div>
+        <div class="nav-links" id="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Books.html">Books</a>
+            <a href="Services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <!-- <h2>Welcome to E-Library</h2> -->
+    <br>
+    <section class="about">
+        <h2>About E-Library</h2>
+        <p>
+            Welcome to <strong>E-Library</strong>, your digital companion for endless learning, entertainment, and
+            discovery. Founded with the vision to make quality literature and educational resources available to
+            everyone, E-Library bridges the gap between knowledge and accessibility in today’s fast-paced digital age.
+        </p>
+        <p>
+            With thousands of titles across genres—from timeless classics to the latest bestsellers, academic resources
+            to self-improvement guides—E-Library offers a seamless reading experience on any device, anytime, anywhere.
+            Whether you are a student researching for a paper, a professional looking to upskill, or simply a curious
+            mind exploring new stories, we have something for you.
+        </p>
+        <p>
+            We are more than just a digital bookshelf. E-Library is a growing community of readers, learners, and
+            thinkers who believe that books can change lives. Our platform supports multilingual books, offline access,
+            AI-powered recommendations, and even collaborative book clubs for interactive reading.
+        </p>
+        <p>
+            At E-Library, we hold true to our core values—<strong>accessibility</strong>, <strong>inclusivity</strong>,
+            <strong>innovation</strong>, and <strong>education for all</strong>. We are committed to building a future
+            where no one is deprived of knowledge due to barriers of location, language, or financial constraints.
+        </p>
+        <p>
+            Join us as we turn every page into a new opportunity, every story into inspiration, and every reader into a
+            leader of tomorrow.
+        </p>
+    </section>
+
+    <div class="founder-message">
+        <h3>📢 Message from the Founder</h3>
+        <p>“We created E-Library with one goal — to empower curious minds by making books more accessible, affordable,
+            and enjoyable. No matter where you are, the world of knowledge is just a click away.”</p>
+        <p><strong>- Aarya Sharma, Founder & CEO</strong></p>
+    </div>
+    <div class="our-team">
+        <h3>👨‍💻 Meet Our Team</h3>
+        <ul>
+            <li><strong>Aarya Sharma</strong> – CEO & Founder</li>
+            <li><strong>Kavya Patel</strong> – CTO & Product Designer</li>
+            <li><strong>Rohan Mehta</strong> – Backend Developer</li>
+            <li><strong>Sneha Iyer</strong> – Frontend Developer</li>
+            <li><strong>Amir Sheikh</strong> – Content Curator</li>
+        </ul>
+    </div>
+    <div class="timeline">
+        <h3>📅 Our Journey</h3>
+        <ul>
+            <li><strong>2022:</strong> Idea of E-Library conceived during a hackathon</li>
+            <li><strong>2023:</strong> Beta version launched with 1,000+ books</li>
+            <li><strong>2024:</strong> Cross-platform access introduced</li>
+            <li><strong>2025:</strong> Reached 10,000+ active users and AI recommendations</li>
+        </ul>
+    </div>
+    <div class="testimonials">
+        <h3>💬 What Our Readers Say</h3>
+        <blockquote>“This is the best reading platform I've ever used. So clean and packed with great features!” –
+            <em>Ritika D.</em>
+        </blockquote>
+        <blockquote>“Being able to download and read offline helps me on my commute.” – <em>Arjun T.</em></blockquote>
+    </div>
+    <section class="features">
+        <h2>Why Choose E-Library?</h2>
+        <div class="feature-items">
+            <div class="feature-item">
+                <h3>Free Access</h3>
+                <p>Read thousands of books online at no cost. No subscription fees, no hidden charges.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Multilingual Support</h3>
+                <p>Books available in multiple languages to cater to readers worldwide.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Offline Reading</h3>
+                <p>Download your favorite books and read them offline at your convenience.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Personalized Recommendations</h3>
+                <p>Get book suggestions tailored to your reading preferences and history.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="education-mission">
+        <h3>🎓 Education for All</h3>
+        <p>We collaborate with schools and NGOs to bring free digital books to underprivileged communities, helping
+            bridge the education gap in rural areas.</p>
+    </div>
+    <div class="app-download">
+        <h3>📱 Coming Soon: E-Library Mobile App</h3>
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store"
+            style="height: 40px; margin-right: 10px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store"
+            style="height: 40px;">
+    </div>
+
+    <div class="newsletter">
+        <h3>📬 Subscribe to Our Newsletter</h3>
+        <input id="emailInput" type="email" placeholder="Enter your email" />
+        <button id="subscribeBtn">Subscribe</button>
+        <p id="msg" style="color:green; margin-top:10px;"></p>
+    </div>
+
+    <script>
+        document.getElementById('subscribeBtn').addEventListener('click', () => {
+            const emailInput = document.getElementById('emailInput');
+            const email = emailInput.value.trim();
+            const msg = document.getElementById('msg');
+
+            if (!email || !email.includes('@')) {
+                msg.style.color = 'red';
+                msg.textContent = 'Please enter a valid email.';
+                return;
+            }
+
+            // Save email locally (demo only)
+            let emails = JSON.parse(localStorage.getItem('subscribedEmails') || '[]');
+            if (!emails.includes(email)) {
+                emails.push(email);
+                localStorage.setItem('subscribedEmails', JSON.stringify(emails));
+                msg.style.color = 'green';
+                msg.textContent = 'Thank you for subscribing!';
+                emailInput.value = '';
+            } else {
+                msg.style.color = 'orange';
+                msg.textContent = 'You are already subscribed.';
+            }
+        });
+    </script>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('nav-links');
+            nav.classList.toggle('show');
+        }
+
+        // Get all category divs
+        const categories = document.querySelectorAll('.category');
+
+        categories.forEach(category => {
+            category.addEventListener('click', () => {
+                // Remove active class from all categories
+                categories.forEach(cat => cat.classList.remove('active'));
+
+                // Add active class to clicked category
+                category.classList.add('active');
+
+                // Show alert or handle the category click event
+                alert(`You selected category: ${category.textContent}`);
+            });
+        });
+
+
+    </script>
+
+    <div id="searchResults" style="margin-top:20px;"></div>
+
+    <footer>
+        <p>&copy; 2025 E-Library. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
