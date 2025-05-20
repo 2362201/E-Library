@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book | E-Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png"
+        href="https://th.bing.com/th/id/OIP.jxgcO4kGg29mLMQadCXelwHaE0?rs=1&pid=ImgDetMain">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://th.bing.com/th/id/OIP.LuPdo5BXEqpQHa1wSM7_BwHaLH?rs=1&pid=ImgDetMain" alt="Book Icon"
+                class="book-icon">E-Library
+        </div>
+        <div class="burger" onclick="toggleMenu()">☰</div>
+        <div class="nav-links" id="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Books.html">Books</a>
+            <a href="Services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="books-info">
+        <h2>Our Books</h2>
+        <p>Our collection features thousands of books carefully curated to cater to every reader's taste. From timeless
+            classics and contemporary fiction to in-depth academic texts and practical self-help guides, our library
+            covers a wide range of topics and genres.</p>
+        <p>Each book is selected to enrich your knowledge, spark your imagination, and provide valuable insights.</p>
+        <p>Explore our diverse catalog and discover your next favorite book today!</p>
+    </section>
+
+    <section class="categories">
+        <h3>📚 Explore by Category</h3>
+        <div class="category-list">
+            <a href="fiction.html" class="category">📖 Fiction</a>
+            <a href="non-fiction.html" class="category">📘 Non-Fiction</a>
+            <a href="self-help.html" class="category">💡 Self Help</a>
+            <a href="science.html" class="category">🔬 Science</a>
+            <a href="biographies.html" class="category">👤 Biographies</a>
+        </div>
+    </section>
+
+    <div class="cards">
+        <h3>Featured Books</h3>
+        <div class="cards-grid">
+
+            <div class="book-card">
+                <img src="https://www.adgully.com/img/800/201809/bhagat-thegirlinroom105-24041-cv-ft.jpg"
+                    alt="The Girl in Room 105">
+                <div class="book-info">
+                    <h4>The Girl in Room 105</h4>
+                    <p>by Chetan Bhagat</p>
+                    <button onclick="openPDF('pdfs/girl_in_room_105.pdf')">Read Online</button><br>
+                    <button class="pay-now-btn" onclick="redirectToPayment('The Girl in Room 105')">Pay Now</button>
+                </div>
+            </div>
+
+
+            <div class="book-card">
+                <img src="https://cdn.shopclues.com/images/detailed/25861/2statesoriginalimaeyg6ywfrehnhz_1444302095.jpg"
+                    alt="2 States">
+                <div class="book-info">
+                    <h4>2 States</h4>
+                    <p>by Chetan Bhagat</p>
+                    <button onclick="openPDF('pdfs/2_states.pdf')">Read Online</button>
+                    <button class="pay-now-btn" onclick="redirectToPayment('2 States')">Pay Now</button>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <img src="https://cdn.collider.com/wp-content/uploads/2015/08/jungle-book-poster-hi-res.jpeg"
+                    alt="Jungle Book">
+                <div class="book-info">
+                    <h4>Jungle Book</h4>
+                    <p>by Rudyard Kipling</p>
+                    <button onclick="openPDF('pdfs/jungle_book.pdf')">Read Online</button>
+                    <button class="pay-now-btn" onclick="redirectToPayment('Jungle Book')">Pay Now</button>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <img src="https://diwanegypt.com/wp-content/uploads/2020/11/9789388810456.jpg"
+                    alt="The Greatest of Novel">
+                <div class="book-info">
+                    <h4>The Greatest of Novel</h4>
+                    <p>by Mark Twain</p>
+                    <button onclick="openPDF('pdfs/the_greatest_of_novel.pdf')">Read Online</button>
+                    <button class="pay-now-btn" onclick="redirectToPayment('The Greatest of Novel')">Pay Now</button>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <img src="https://i.pinimg.com/736x/32/3b/83/323b83e9fc04605429b27ccbfc646768.jpg" alt="Descent">
+                <div class="book-info">
+                    <h4>Descent</h4>
+                    <p>by Tim Johnston</p>
+                    <button onclick="openPDF('pdfs/descent.pdf')">Read Online</button>
+                    <button class="pay-now-btn" onclick="redirectToPayment('Descent')">Pay Now</button>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <img src="https://www.rd.com/wp-content/uploads/2019/08/A-Study-in-Scarlet-Women-via-Amazon.com_.jpg?fit=700%2C700"
+                    alt="A Study in Scarlet Women">
+                <div class="book-info">
+                    <h4>A Study in Scarlet Women</h4>
+                    <p>by Sherry Thomson</p>
+                    <button onclick="openPDF('pdfs/a_study_in_scarlet_women.pdf')">Read Online</button>
+                    <button class="pay-now-btn" onclick="redirectToPayment('A Study in Scarlet Women')">Pay Now</button>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/417eEXp4eHL.jpg" alt="Tell No One">
+                <div class="book-info">
+                    <h4>Tell No One</h4>
+                    <p>by Harlan Coben</p>
+                    <button onclick="openPDF('pdfs/tell_no_one.pdf')">Read Online</button>
+                    <button class="pay-now-btn" onclick="redirectToPayment('Tell No One')">Pay Now</button>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <img src="https://miblart.com/wp-content/uploads/2020/10/ZP6x4iTg-scaled.jpeg" alt="Grave Secrets">
+                <div class="book-info">
+                    <h4>Grave Secrets</h4>
+                    <p>by Rex Munsee</p>
+                    <button onclick="openPDF('pdfs/grave_secrets.pdf')">Read Online</button>
+                    <button class="pay-now-btn" onclick="redirectToPayment('Grave Secrets')">Pay Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PDF Viewer Section -->
+        <div id="pdfViewerContainer" style="display:none; padding: 20px; margin-top: 30px;">
+            <h3>Reading Book</h3>
+            <iframe id="pdfViewer" src="" width="100%" height="600px"
+                style="border: 2px solid #ccc; border-radius: 8px;"></iframe>
+            <br><br>
+            <button onclick="closePDF()"
+                style="padding: 8px 16px; background: #333; color: white; border: none; border-radius: 4px;">Close
+                PDF</button>
+        </div>
+
+        <!-- JavaScript -->
+        <script>
+            function redirectToPayment(bookTitle) {
+                window.location.href = `payment.html?book=${encodeURIComponent(bookTitle)}`;
+            }
+
+            function redirectToPayment(pdfPath) {
+                window.location.href = `payment.html?book=${encodeURIComponent(pdfPath)}`;
+            }
+            function openPDF(pdfPath) {
+                const viewerContainer = document.getElementById("pdfViewerContainer");
+                const viewer = document.getElementById("pdfViewer");
+
+                viewer.src = pdfPath;
+                viewerContainer.style.display = "block";
+                viewerContainer.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            function closePDF() {
+                const viewerContainer = document.getElementById("pdfViewerContainer");
+                const viewer = document.getElementById("pdfViewer");
+
+                viewer.src = "";
+                viewerContainer.style.display = "none";
+            }
+            // backend.js (Node.js with express)
+            import express from 'express';
+            import cors from 'cors';
+            import { Configuration, OpenAIApi } from "openai";
+
+            const app = express();
+            app.use(cors());
+            app.use(express.json());
+
+            const configuration = new Configuration({
+                apiKey: "YOUR_OPENAI_API_KEY", // Replace with your key
+            });
+            const openai = new OpenAIApi(configuration);
+
+            app.post('/api/summarize', async (req, res) => {
+                try {
+                    const { text } = req.body;
+                    const completion = await openai.createChatCompletion({
+                        model: "gpt-4o-mini",
+                        messages: [
+                            { role: "system", content: "You are a helpful assistant that summarizes text." },
+                            { role: "user", content: `Summarize this:\n\n${text}` }
+                        ],
+                        max_tokens: 150,
+                    });
+                    res.json({ summary: completion.data.choices[0].message.content });
+                } catch (error) {
+                    res.status(500).json({ error: error.message });
+                }
+            });
+
+            app.listen(4000, () => console.log("Server running on port 4000"));
+
+        </script>
+
+    </div>
+
+
+    <script>
+        async function sendMessage() {
+            const input = document.getElementById('chatInput').value;
+            if (!input) return;
+
+            appendMessage('You', input);
+
+            const response = await fetch('https://api.openai.com/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer YOUR_OPENAI_API_KEY' // replace with your key
+                },
+                body: JSON.stringify({
+                    model: "gpt-4o-mini",
+                    messages: [
+                        { role: "system", content: "You are an e-library assistant." },
+                        { role: "user", content: input }
+                    ],
+                    max_tokens: 150
+                })
+            });
+            const data = await response.json();
+            const botReply = data.choices[0].message.content;
+            appendMessage('Bot', botReply);
+        }
+
+        function appendMessage(sender, text) {
+            const div = document.createElement('div');
+            div.textContent = `${sender}: ${text}`;
+            document.getElementById('chatOutput').appendChild(div);
+        }
+
+        // Voice search below...
+    </script>
+
+
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search books by title, author, or genre...">
+        <button type="button" id="searchButton">Search</button>
+    </div>
+
+    <div class="explore-more">
+        <input type="text" id="explore" placeholder="Explore more books.....">
+        <button type="button" id="exploreButton">Explore more</button>
+
+    </div>
+
+    <p><strong>Genre:</strong> Fiction</p>
+    <div class="rating">⭐️⭐️⭐️⭐️☆ (4.0)</div>
+
+
+    <div id="results"></div>
+
+
+    <footer>
+        <p>&copy; 2025 E-Library. All rights reserved.</p>
+    </footer>
+
+    <script>
+
+        document.getElementById("sortBooks").addEventListener("change", (e) => {
+            // Example: re-sort `.book-card` based on selected option
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const resultsDiv = document.getElementById('results');
+
+            function fetchBooks(query, label) {
+                if (!query.trim()) {
+                    resultsDiv.innerHTML = `<p>Please enter a ${label} query.</p>`;
+                    return;
+                }
+
+                const url = `https://openlibrary.org/search.json?q=${encodeURIComponent(query)}`;
+                fetch(url)
+                    .then(res => res.json())
+                    .then(data => {
+                        if (!data.docs.length) {
+                            resultsDiv.innerHTML = `<p>No results found for "${query}".</p>`;
+                            return;
+                        }
+
+                        const books = data.docs.slice(0, 10).map(book => {
+                            return `
+            <div class="book-item">
+                <h3>${book.title}</h3>
+                <p><strong>Author:</strong> ${book.author_name?.join(', ') || 'Unknown'}</p>
+                <p><strong>Year:</strong> ${book.first_publish_year || 'N/A'}</p>
+            </div>
+            `;
+                        }).join('');
+
+                        resultsDiv.innerHTML = `<h2>${label} Results:</h2><div class="book-list">${books}</div>`;
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        resultsDiv.innerHTML = `<p>Error fetching ${label.toLowerCase()} results. Try again later.</p>`;
+                    });
+            }
+
+            // Search button
+            document.getElementById('searchButton').addEventListener('click', () => {
+                const query = document.getElementById('searchInput').value;
+                fetchBooks(query, 'Search');
+            });
+
+            // Explore button
+            document.getElementById('exploreButton').addEventListener('click', () => {
+                const query = document.getElementById('explore').value;
+                fetchBooks(query, 'Explore');
+            });
+        });
+
+
+        function openPDF(pdfPath) {
+            window.open(pdfPath, '_blank');
+        }
+
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        document.getElementById('searchButton').addEventListener('click', async () => {
+            const query = document.getElementById('searchInput').value.trim();
+            const resultsContainer = document.getElementById('searchResults');
+            resultsContainer.innerHTML = '';
+
+            if (!query) {
+                resultsContainer.innerHTML = '<li>Please enter a search term.</li>';
+                return;
+            }
+
+            try {
+                const response = await fetch(`https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=10`);
+                if (!response.ok) throw new Error('Network error.');
+
+                const data = await response.json();
+                if (data.docs.length === 0) {
+                    resultsContainer.innerHTML = '<li>No results found.</li>';
+                    return;
+                }
+
+                data.docs.forEach(book => {
+                    const title = book.title || 'No title';
+                    const author = book.author_name ? book.author_name.join(', ') : 'Unknown author';
+                    const year = book.first_publish_year || 'N/A';
+
+                    const li = document.createElement('li');
+                    li.textContent = `${title} by ${author} (${year})`;
+                    resultsContainer.appendChild(li);
+                });
+            } catch (error) {
+                resultsContainer.innerHTML = `<li>Error: ${error.message}</li>`;
+            }
+        });
+    </script>
+</body>
+
+</html>
